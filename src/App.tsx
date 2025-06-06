@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import HomePage from "./pages/HomePage";
+import Register from "./pages/Register";
+import RegisterForm from "./pages/RegisterForm";
+import Login from "./pages/Login";
+import ProductPage from "./pages/ProductPage";
+import OrderPage from "./pages/OrderPage";
+import ProductViewPage from "./pages/ProductViewPage";
+import CartPage from "./pages/CartPage";
+import PageInConstruction from "./pages/PageConstruction";
+import PurchasePage from "./pages/PurchasePage";
+import PurchaseDonePage from "./pages/PurchaseDonePage";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter basename="/ecommerce-front">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/purchasepage" element={ <PurchasePage/> } />
+        <Route path="/purchasedone" element={ <PurchaseDonePage/> } />
+        <Route path="/home" element={ <Navigate to="/" /> } />
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/construction/" element={<PageInConstruction />} />
+        <Route path="/cart/" element={<CartPage />} />
+        <Route path="/login/" element={<Login />} />
+        <Route path="/myproducts/" element={<OrderPage />} />
+        <Route path="/product/*" element={<ProductViewPage />} />
+        <Route path="/register/" element={<Register />} />
+        <Route path="/products/" element={<ProductPage />} />
+        <Route path="/products/*" element={<ProductPage />} />
+        <Route path="/register/registerform/" element={<RegisterForm />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
