@@ -14,7 +14,7 @@ import PurchaseDonePage from "./pages/PurchaseDonePage";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/ecommerce-front">
+    <BrowserRouter basename="/projeto-digital-store">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/purchasepage" element={ <PurchasePage/> } />

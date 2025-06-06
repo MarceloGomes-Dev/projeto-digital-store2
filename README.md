@@ -6,6 +6,13 @@
 
 <img src="https://github.com/user-attachments/assets/076e4023-8758-45fa-882b-60838350c595" alt="Imagem 1" style="margin-right: 10px;" />
 
+###  Tecnologias utilizadas
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
 #####
 
 > [!IMPORTANT]
@@ -16,12 +23,6 @@
 >  * Tênis Puma - Masculino
 >  * Tenis Nike - Feminino
 
-###  Tecnologias utilizadas
-
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 ##  Rodando o Front end
 
